@@ -7,14 +7,14 @@ module.exports.Qsnack = Qsnack
 function Qsnack(tokens){
     this.Tokens = tokens || new token.Tokens()
 }
-
+var access_token_time = 0;
 // 获取Access Token
 Qsnack.prototype.getAccessToken = function (callback) {
   var c = this
   var url = addr.HOST+addr.GET_ACCESS_TOKEN_API
   http.postform(url,null,this.Tokens.toArgs(),function(error,response,body){
        if(!error && response.statusCode == 200){
-          window.localStorage.setItem('access_token_time',Date.now())
+          access_token_time = Date.now()
           c.Tokens.setToken(JSON.parse(body))
           console.log("获得AccessToken:",c.Tokens.getAccessToken())
           if(callback){
@@ -48,7 +48,6 @@ Qsnack.prototype.refreshAccessToken = function () {
 
 Qsnack.prototype.authWrapper = function (func){
   var c = this
-  var access_token_time = window.localStorage.getItem('access_token_time');
   var now = Date.now();
   if (!c.Tokens.token || now-access_token_time >= 7200000){
      this.getAccessToken(function(){
