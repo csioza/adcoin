@@ -1,0 +1,73 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'isntall',
+1 verbose cli   'requst' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.34
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose cache add [ 'requst', null ]
+6 verbose cache add name=undefined spec="requst" args=["requst",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'requst',
+7 verbose parsed url   path: 'requst',
+7 verbose parsed url   href: 'requst' }
+8 silly lockFile 3519d260-requst requst
+9 verbose lock requst C:\Users\dengzh\AppData\Roaming\npm-cache\3519d260-requst.lock
+10 silly lockFile 3519d260-requst requst
+11 silly lockFile 3519d260-requst requst
+12 verbose addNamed [ 'requst', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 3bd63da1-requst requst@
+15 verbose lock requst@ C:\Users\dengzh\AppData\Roaming\npm-cache\3bd63da1-requst.lock
+16 silly addNameRange { name: 'requst', range: '*', hasData: false }
+17 verbose request where is /requst
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 9da6b3857e55aa74
+20 verbose url raw /requst
+21 verbose url resolving [ 'https://registry.npmjs.org/', './requst' ]
+22 verbose url resolved https://registry.npmjs.org/requst
+23 verbose request where is https://registry.npmjs.org/requst
+24 info trying registry request attempt 1 at 10:27:41
+25 http GET https://registry.npmjs.org/requst
+26 http 200 https://registry.npmjs.org/requst
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Tue, 18 Dec 2018 02:27:40 GMT',
+27 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+27 silly registry.get     'transfer-encoding': 'chunked',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'set-cookie': [ '__cfduid=d53430b73f7d32e356ed5fe41dc23fc641545100060; expires=Wed, 18-Dec-19 02:27:40 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+27 silly registry.get     'cf-cache-status': 'MISS',
+27 silly registry.get     'cache-control': 'max-age=300',
+27 silly registry.get     'cf-ray': '48ae3113c9a7986b-LAX',
+27 silly registry.get     etag: 'W/"e75507ccb6a4c9b24f5e46cfe6a73291"',
+27 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+27 silly registry.get     'last-modified': 'Sun, 27 May 2018 15:53:00 GMT',
+27 silly registry.get     vary: 'accept-encoding, accept',
+27 silly registry.get     server: 'cloudflare',
+27 silly registry.get     'content-encoding': 'gzip' } ]
+28 silly addNameRange number 2 { name: 'requst', range: '*', hasData: true }
+29 silly addNameRange versions [ 'requst', [] ]
+30 error TypeError: Cannot read property 'latest' of undefined
+30 error     at next (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:219:35)
+30 error     at C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:207:5
+30 error     at saved (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\get.js:167:7)
+30 error     at Object.oncomplete (fs.js:108:15)
+31 error If you need help, you may report this *entire* log,
+31 error including the npm and node versions, at:
+31 error     <http://github.com/npm/npm/issues>
+32 error System Windows_NT 6.2.9200
+33 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "isntall" "requst"
+34 error cwd C:\darren\Github\adcoin
+35 error node -v v0.10.34
+36 error npm -v 1.4.28
+37 error type non_object_property_load
+38 verbose exit [ 1, true ]
